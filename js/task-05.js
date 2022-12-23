@@ -4,9 +4,12 @@ console.log(userNameInput, spanName);
 userNameInput.addEventListener("input", (event) => {
   //spanName.textContent = event.target.value;
   console.log(spanName.textContent);
-  event.target.value === ""
-    ? (spanName.textContent = "Anonymous")
-    : (spanName.textContent = event.target.value);
+  if (event.target.value === "") {
+    spanName.textContent = "Anonymous";
+  } else spanName.textContent = event.target.value;
+  // event.target.value === ""
+  //   ? (spanName.textContent = "Anonymous")
+  //   : (spanName.textContent = event.target.value);
 });
 // Напиши скрипт который, при наборе текста в инпуте input#name-input (событие input), подставляет его текущее значение в span#name-output. Если инпут пустой, в спане должна отображаться строка "Anonymous".
 
